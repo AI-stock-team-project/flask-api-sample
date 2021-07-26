@@ -26,8 +26,10 @@ Flask Sample Code
 의미로 생각된다. `.py`확장자라는 것은 결과적으로 파이썬 스크립트라는 의미라는 의미이므로. `flask run`은 `app.py`라는 
 파이썬 스크립트를 실행해서 띄우고 있다는 의미로 볼 수 있다.
 
-코드가 엄청 많지는 않다. (다른 패키지들과의 의존성은 조금 있지만..)
-`flask/cli.py`를 열어서 살펴보면 아래와 같은 부분을 찾을 수 있다.
+깊게 프레임워크를 분석해보자면.. 
+일단 코드가 엄청 많지는 않다. (다른 패키지들과의 의존성은 조금 있지만..)
+Flask 프레임워크 `flask/cli.py`를 열어서 살펴보면 아래와 같은 부분을 찾을 수 있다.
+(https://github.com/pallets/flask/blob/main/src/flask/cli.py 에서 바로 볼 수 있음)
 
 `flask/cli.py`파일에서 779라인 (flask 2.0.1 기준)
 ```
@@ -36,7 +38,9 @@ Flask Sample Code
 @click.option("--port", "-p", default=5000, help="The port to bind to.")
 ```
 
-바로 `app.py`에 대해 찾아보면
+이 파일에서, `flask run` 커맨드에 관련된 코드가 있음을 알 수 있다. 
+
+이 파일에서 `app.py`에 대해 찾아보면,
 
 `flask/cli.py`파일에서 404라인 (flask 2.0.1 기준)
 ```
