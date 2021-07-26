@@ -1,0 +1,21 @@
+# General
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# python cache
+__pycache__/
+
+# Python virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# docker
