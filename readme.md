@@ -21,7 +21,7 @@ Flask Sample Code
 
 
 # flask 동작 방식에 대한 이해
-`flask run`을 하게 되면 `app.py`을 읽는 것으로 보인다. 이 파일에는 '__main__'이 지정되어 있으므로, 이 부분이 
+`flask run`을 하게 되면 `app.py`을 읽는 것으로 보인다. 이 파일에는 `if __name__ == '__main__':`이 지정되어 있으므로, 이 부분이 
 실행이 될 것이다. 반대로 본다면, app.py에 변경이 있고 이를 적용해야 한다면, `flask run`을 다시 해줄 필요가 있다는 
 의미로 생각된다. `.py`확장자라는 것은 결과적으로 파이썬 스크립트라는 의미라는 의미이므로. `flask run`은 `app.py`라는 
 파이썬 스크립트를 실행해서 띄우고 있다는 의미로 볼 수 있다.
@@ -52,6 +52,6 @@ for path in ("wsgi.py", "app.py"):
 # Docker 실행
 `docker-compose up --build --force-recreate -d`
 
-명렁이 실행 후 브라우저에서 다음을 접속
+커맨드 실행 후 브라우저에서 다음을 접속
 
 http://localhost:15000
