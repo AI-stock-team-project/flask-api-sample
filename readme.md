@@ -56,6 +56,6 @@ for path in ("wsgi.py", "app.py"):
 # Docker 실행
 `docker-compose up --build --force-recreate -d`
 
-커맨드 실행 후 브라우저에서 다음을 접속
+프로젝트 경로에서 커맨드 실행 후, 브라우저에서 다음을 접속
 
 http://localhost:15000
