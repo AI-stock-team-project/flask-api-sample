@@ -1,15 +1,24 @@
 # 개요
 Flask Sample Code
 
+
 # PIP 리스트
+(도커 없이 테스트할 때)
+
 `pip install flask`
 
+
 # flask 실행
-`flask run -p 4000`
+(도커 없이 테스트할 때)
+
+`flask run -p 5000`
+
+
 
 참고) docker 내에서 이용할 때에는 host 를 `0.0.0.0`으로 주어야 한다. (모든 곳에서 이용가능하게 하겠다는 의미로 보임)
 이 설정은 Dockerfile 이나 docker-compose 둘 중 한 군데에서 지정하면 된다. (기본값이 localhost 인 것으로 생각되는데, 
 이 경우에 도커 컨테이너에서 실행될 때에 접근이 안 되는 듯함)
+
 
 # flask 동작 방식에 대한 이해
 `flask run`을 하게 되면 `app.py`을 읽는 것으로 보인다. 이 파일에는 '__main__'이 지정되어 있으므로, 이 부분이 
@@ -38,6 +47,7 @@ for path in ("wsgi.py", "app.py"):
 같은 부분을 찾을 수 있다.
 
 결론적으로 말해서, flask 의 시작점은 `wsgi.py` 또는 `app.py`라고 볼 수 있다.
+
 
 # Docker 실행
 `docker-compose up --build --force-recreate -d`
