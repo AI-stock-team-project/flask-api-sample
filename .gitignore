@@ -4,6 +4,7 @@ Thumbs.db
 
 # IDEs
 .vscode/
+*.code-workspace
 .idea/
 
 # python cache
