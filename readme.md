@@ -39,4 +39,9 @@ for path in ("wsgi.py", "app.py"):
 
 결론적으로 말해서, flask 의 시작점은 `wsgi.py` 또는 `app.py`라고 볼 수 있다.
 
+# Docker 실행
+`docker-compose up --build --force-recreate -d`
 
+명렁이 실행 후 브라우저에서 다음을 접속
+
+http://localhost:15000

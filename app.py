@@ -9,20 +9,23 @@ def index():
     return 'ddd'
 
 
-# http://127.0.0.1:4000/test
+# http://127.0.0.1:5000/test
+# http://localhost:15000/test
 @app.route("/test")
 def test():
     return 'test'
 
 
-# http://127.0.0.1:4000/test2
+# http://127.0.0.1:5000/test2
+# http://localhost:15000/test2
 @app.route("/test2")
 def test2():
     data = {"success": True, "status": "success", "message": "성공하였습니다."}
     return jsonify(data)
 
 
-# http://127.0.0.1:4000/test3?name=123
+# http://127.0.0.1:5000/test3?name=123
+# http://localhost:15000/test3?name=123
 @app.route("/test3")
 def test3():
     name = flask.request.args.get('name')
@@ -30,7 +33,7 @@ def test3():
     return jsonify(data)
 
 
-# flask run -p 4000
+# flask run -p 5000
 if __name__ == '__main__':
     app.run(debug=True)
     # app.run('0.0.0.0', port=5000, debug=True)
