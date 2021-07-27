@@ -2,6 +2,11 @@
 Flask Sample Code
 
 
+Flask
+* git : https://github.com/pallets/flask
+* doc : https://flask.palletsprojects.com/en/2.0.x/
+
+
 # PIP 리스트
 (도커 없이 테스트할 때)
 
